@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POMODORO</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        .timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            margin-top: 20px;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            ;
+        }
+        #img {
+            display: block;
+            margin: 20px auto;
+            width: 100px;
+            height: auto;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>POMODORO TIMER</h1>
+        <div id="timer-display">25:00</div>
+        <button id="start-button">Start</button>
+        <button id="stop-button">Stop</button>
+        <button id="reset-button">Reset</button>
+    </div>
+    <footer>
+        <p>Created by e/adityasaini</p>
+        <img id="img" src="https://i.postimg.cc/fL2kLnBN/lgo.png" alt="logo">
+    </footer>
+</body>
+  <script>
+    const startButton = document.getElementById('start-button');
+    const stopButton = document.getElementById('stop-button');
+    const resetButton = document.getElementById('reset-button');
+    const timerDisplay = document.getElementById('timer-display');
+
+    let timer;
+    let isRunning = false;
+    let timeLeft = 25 * 60;
+
+    function updateDisplay() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+
+    startButton.addEventListener('click', () => {
+      if (!isRunning) {
+        isRunning = true;
+        timer = setInterval(() => {
+          timeLeft--;
+          updateDisplay();
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            isRunning = false;
+            alert('It is time to get a rest for a change of pace!');
+            timeLeft = 25 * 60; 
+          }
+        }, 1000);
+      }
+    });
+
+    stopButton.addEventListener('click', () => {
+      clearInterval(timer);
+      isRunning = false;
+    });
+
+    resetButton.addEventListener('click', () => {
+      clearInterval(timer);
+      isRunning = false;
+      timeLeft = 25 * 60;
+      updateDisplay();
+    });
+
+    updateDisplay();
+  </script>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality test</title>
+
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #dcc8c8;
+            margin: 0;
+            padding: 20px;
+         }
+            h1{
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                color:rgb(29, 51, 51)
+            }
+            p {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: large;
+                color:rgb(36, 38, 41)
+            }
+            #personality-form {
+                background-color: #f2f2f2;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            label {
+                font-weight: bold;
+                color: rgb(29, 51, 51);
+            }
+            #result{
+                margin-top: 20px;
+                font-size: 1.5em;
+                color: rgb(29, 51, 51);
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+                background-color: #f2f2f2;
+                border-radius: 10px;
+            }
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+
+    </style>
+
+</head>
+<body>
+    <h1>Personality test</h1>
+    <p>Answer the following questions to find out your personality type.</p>
+
+    <form id="personality-form">
+        <label for="question1">Q1: Your Favourite cartoon character: </label><br>
+        <input type="radio" name="question1" value="mickey"> Mickey Mouse<br>
+        <input type="radio" name="question1" value="sponge"> SpongeBob SquarePants<br>
+        <input type="radio" name="question1" value="batman">Batman <br>
+        <input type="radio" name="question1" value="oggy">  Oggy<br><br>
+
+        <label for="question2">Q2: Your first emoji:</label><br>
+        <input type="radio" name="question2" value="smile"> 😊 Smile<br>
+        <input type="radio" name="question2" value="heart"> ❤️ Heart<br>
+        <input type="radio" name="question2" value="thumbs_up"> 👍 Thumbs Up<br>
+        <input type="radio" name="question2" value="laugh">😂Laughter<br><br>
+
+        <label for="question3">Q3: You forgot to study for your maths test, what will you do:</label><br>
+        <input type="radio" name="question3" value="study"> Study late night<br>
+        <input type="radio" name="question3" value="sleep"> Take sleep and Have fun (don't care)<br>
+        <input type="radio" name="question3" value="cheat"> Cheat from the topper<br>
+        <input type="radio" name="question3" value="act"> Act like you have fever<br><br>
+
+        <label for="question4">Q4: Imagine if wi-fi or internet stops for 1 day, what would you do</label><br>
+        <input type="radio" name="question4" value="hang_out"> Hang out with friends<br>
+        <input type="radio" name="question4" value="offline"> Play offline games or movies<br>
+        <input type="radio" name="question4" value="eat"> Just sleep and eat whole day<br>   
+        <input type="radio" name="question4" value="work"> Help your home<br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2 id="result"></h2>
+</body>
+
+<script>
+        document.getElementById("personality-form").addEventListener("submit", function (e) {  e.preventDefault(); 
+      const q1 = document.querySelector('input[name="question1"]:checked')?.value;
+      const q2 = document.querySelector('input[name="question2"]:checked')?.value;
+      const q3 = document.querySelector('input[name="question3"]:checked')?.value;
+      const q4 = document.querySelector('input[name="question4"]:checked')?.value;
+
+      const resultElement = document.getElementById("result")
+      resultElement.innerText = "";
+      if (!q1 || !q2 || !q3 || !q4) {
+      resultElement.innerText = "⚠️ Please answer all the questions before submitting!";
+      resultElement.style.color = "red";
+      return;
+    }
+
+      let result = "";
+
+      if (q1 === "sponge"  && q3 === "sleep" ) {
+        result = "You're an ideal sponge bob";
+      } else if (q1 === "batman"  && q3 === "study" &&q4 === "offline") {
+        result = "You should protect gotham city";
+      } else if (q1 === "mickey" && q3 === "act" && q4 === "hang_out") {
+        result = "You are a drama king/queen";
+      } else if (q1 === "oggy" && q2 === "heart" && q3 === "cheat" && q4 === "work") {
+        result = "You have an infinite aura";
+      } else if ( q3 === "cheat" && q4 === "eat") {
+        result = "Why are you even studying?";
+      } else if (q1 === "sponge" && q2 === "heart" && q3 === "act" ) {
+        result = "You must evacuate the earth. Lol!";
+      } else if (q1 === "oggy" && q2 === "smile" && q3 === "study" && q4 === "work") {
+        result = "You are legend";
+      } else if ( q2 === "thumbs_up" && q3 === "sleep" && q4 === "offline") {
+        result = "Your aura is negative";
+      } else {
+        result = "You're a flying spaghetti monster";
+      }
+         
+      resultElement.innerText = result;
+      resultElement.style.color = "black";
+      })
+
+    
+
+
+</script>
+<!-- Under25 username = e/adityasaini -->
+
+</html>
