@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #0d0d12;
+            color: #eee;
+        }
+
+        .main-box {
+            width: 88%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #14141b;
+            padding: 25px 40px;
+            border-radius: 20px;
+            transition: 0.4s ease;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+
+        .main-box:hover {
+            background: #191922;
+            box-shadow: 0 0 25px rgba(120,0,255,0.35);
+            transform: scale(1.01);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #b983ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #ccc;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #b983ff;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0 50px;
+        }
+
+        .hero-text {
+            width: 55%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .hero-text h1 span {
+            color: #b983ff;
+        }
+
+        .hero-text h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: -10px;
+            color: #cfcfcf;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            line-height: 1.6;
+            color: #c1c1c1;
+            width: 85%;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social a {
+            width: 40px;
+            height: 40px;
+            background: #b983ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            transform: scale(1.1);
+            background: #d4afff;
+        }
+
+        .hero-img {
+            width: 38%;
+            height: 420px;
+            background: #2a2a35;
+            border-radius: 20px;
+            border: 2px none #777;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #bbb;
+            font-size: 18px;
+        }
+
+        .my-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;  
+            image-rendering: smooth; 
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-img {
+                width: 90%;
+                margin-bottom: 40px;
+            }
+
+            .hero-text p {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-box">
+
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Hi, I'm <span>Aditya Saini</span></h1>
+                <h2>Code Enthusiast</h2>
+
+                <p>
+                  I am a student of B.Tech CSE at DTU.
+                  I have my main interest in AI and ML
+                  for developing new AI models and also
+                  creating web apps.
+                </p>
+
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/aditya-saini-7b80a3378/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Aditya-Saini-Pvt"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/_aditya_._saini_?igsh=ZjZxZDlhZWk0aHF3"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <img src="images/me.png" alt="" class="my-photo">
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

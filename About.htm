@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #0d0d12;
+            color: #eee;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .main-box {
+            width: 88%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #14141b;
+            padding: 30px 40px;
+            border-radius: 20px;
+            transition: 0.4s ease;
+            box-shadow: 0 0 18px rgba(0,0,0,0.4);
+        }
+
+        .main-box:hover {
+            background: #191922;
+            box-shadow: 0 0 25px rgba(120,0,255,0.32);
+            transform: scale(1.01);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+        }
+
+        nav .logo {
+            color: #b983ff;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ccc;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #b983ff;
+        }
+
+        .about-section {
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .about-text h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .about-text h1 span {
+            color: #b983ff;
+        }
+
+        .about-text p {
+            line-height: 1.7;
+            color: #ccc;
+            margin-top: 15px;
+            margin-bottom: 35px;
+            width: 95%;
+        }
+
+        .skills {
+            margin-top: 20px;
+        }
+        .skills h2 {
+            color: #b983ff;
+            margin-bottom: 15px;
+        }
+        .skill-item {
+            font-size: 17px;
+            background: #1f1f27;
+            padding: 10px 18px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: fit-content;
+            border-left: 4px solid #b983ff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main-box">
+
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" style="color:#b983ff;">About</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="about-section">
+            <div class="about-text">
+                <h1>About <span>Me</span></h1>
+
+                <p>
+                  I am Aditya Saini, a student of BTECH CSE at DTU. I am a curious coder and developer and wants to dive in world of computer science more and more. I am a resident of South Delhi, Delhi , India.  
+                  My other interest is in astrophysicist. It is the only subject by which I have been fascinated since my childhood. As a learner, I enjoy exploring different areas of technology, whether it's understanding the fundamentals of programming, building small projects, or experimenting with new concepts. I believe that developing strong core skills early on creates the foundation for future growth, and I constantly try to improve by practicing, reading, and creating.I also love gaming. 
+                </p>
+
+                <div class="skills">
+                    <h2>Skills</h2>
+
+                    <div class="skill-item">Web Design</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">C++</div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

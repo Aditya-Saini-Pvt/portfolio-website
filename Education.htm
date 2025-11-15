@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #0d0d12;
+            color: #eee;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .main-box {
+            width: 88%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #14141b;
+            padding: 30px 40px;
+            border-radius: 20px;
+            transition: 0.4s ease;
+            box-shadow: 0 0 18px rgba(0,0,0,0.4);
+        }
+        .main-box:hover {
+            background: #191922;
+            transform: scale(1.01);
+            box-shadow: 0 0 25px rgba(120,0,255,0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+        }
+        nav .logo {
+            color: #b983ff;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ccc;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #b983ff;
+        }
+
+        .education-section {
+            margin-top: 40px;
+        }
+
+        .education-section h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        .education-section h1 span {
+            color: #b983ff;
+        }
+
+        .edu-card {
+            background: #1d1d26;
+            border-left: 4px solid #b983ff;
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .edu-card:hover {
+            background: #242430;
+            transform: translateX(5px);
+        }
+
+        .edu-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .edu-year {
+            font-size: 14px;
+            color: #aaa;
+            margin: 5px 0 10px;
+        }
+
+        .edu-desc {
+            font-size: 15px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main-box">
+
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html" style="color:#b983ff;">Education</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="education-section">
+            <h1>My <span>Education</span></h1>
+
+            <div class="edu-card">
+                <div class="edu-title">Bachelor of Technology (B.Tech)</div>
+                <div class="edu-year">Started in 2025</div>
+                <div class="edu-desc">
+                    At DTU , Computer Science and Engineering  , Batch => 2025-2029
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-title">Senior Secondary (Class 11-12)</div>
+                <div class="edu-year">2022 – 2024</div>
+                <div class="edu-desc">
+                   At Dr. BR Ambedkar SOSE-Kalkaji , Course - Science(PCM) <br>
+                    Scored - 93.8%
+                </div>
+            </div>
+
+            <div class="edu-card">
+                <div class="edu-title">Secondary (Class 10)</div>
+                <div class="edu-year">2021 – 2022</div>
+                <div class="edu-desc">
+                    At St. Giri Public School <br>
+                    Scored - 96.8%
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
